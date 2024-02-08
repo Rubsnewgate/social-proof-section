@@ -1,0 +1,135 @@
+@import './guide.scss';
+
+// Background Pattern
+.background-top {
+	position: absolute;
+	width: 45vw;
+	height: 45vh;
+	background: url(../assets/icons/bg-pattern-top-desktop.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: -5;
+}
+.background-bottom {
+	position: absolute;
+	width: 98vw;
+	height: 85vh;
+	background-image: url(../assets/icons/bg-pattern-bottom-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 0;
+	right: 0;
+	z-index: -5;
+}
+
+// Main Container
+.main-wrapper {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	width: 100%;
+	height: 100%;
+	font-family: $primary-font;
+}
+
+// Info Section (Left Column)
+.info-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0 10vw;
+}
+.info__text {
+	@include flexbox(column, center, start, 20px);
+}
+.info__title {
+	margin: 0;
+	font-size: $lg-size;
+	color: $very-dark-magenta;
+}
+.info__description {
+	width: 32vw;
+	margin: 0;
+	font-size: $md-size;
+	font-weight: $medium;
+	line-height: 1.2;
+	color: $dark-grayish-magenta;
+}
+
+// Info Section (Right Column)
+.info__rating {
+	@include flexbox(column, center, null, 15px);
+}
+.company-rating {
+	@include flexbox(row, null, center, 25px);
+	width: 75%;
+	height: 7vh;
+	padding: 0 15px;
+	background-color: $light-grayish-magenta;
+	border-radius: 10px;
+	p {
+		font-size: $md-size;
+		font-weight: $bold;
+		color: $very-dark-magenta;
+	}
+}
+.stars-icon {
+	width: 25%;
+	height: 18px;
+	background-image: url(../assets/icons/icon-star.svg);
+	background-repeat: space;
+}
+.rate-two {
+	align-self: center;
+}
+.rate-three {
+	align-self: flex-end;
+}
+
+// Opinions Section
+.opinions-section {
+	@include flexbox(row, space-between, null);
+	padding: 0 10vw 12vh;
+}
+
+// Opinions Section (Cards Styles)
+.opinion__card {
+	width: 25vw;
+	height: 85%;
+	padding: 25px;
+	background-color: $very-dark-magenta;
+	border-radius: 10px;
+}
+.card-two {
+	align-self: center;
+}
+.card-three {
+	align-self: end;
+}
+
+// Opinions Section (Cards Content Styles)
+.user {
+	@include flexbox(row, start, center, 20px);
+}
+.user__photo {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+}
+.user__info {
+	@include flexbox(column, center, null, 5px);
+	font-size: $sm-size;
+}
+.user__info-name {
+	margin: 0;
+	font-weight: $medium;
+	color: $white;
+}
+.user__info-type {
+	margin: 0;
+	color: $soft-pink;
+}
+.user__opinion {
+	color: $light-grayish-magenta;
+	font-size: $md-size;
+	font-weight: $medium;
+	line-height: 1.4;
+}
