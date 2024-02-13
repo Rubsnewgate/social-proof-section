@@ -61,14 +61,21 @@ body {
 }
 
 .company-rating {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   width: 100%;
-  padding: 0 10px;
+  height: auto;
+  padding: 10px;
+}
+.company-rating p {
+  margin: 0;
 }
 
 .stars-icon {
-  display: none;
+  width: 30%;
 }
 
 .opinions-section {
@@ -80,6 +87,12 @@ body {
 
 .opinion__card {
   width: 100%;
+}
+
+@media screen and (width: 540px) {
+  .main-wrapper {
+    width: 370px;
+  }
 }
 
 /*# sourceMappingURL=mobile.css.map */

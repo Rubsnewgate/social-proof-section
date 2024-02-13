@@ -41,13 +41,16 @@
 	margin-bottom: 20px;
 }
 .company-rating {
-	justify-content: center;
-	gap: 10px;
+	@include flexbox(column, center, center, 10px);
 	width: 100%;
-	padding: 0 10px;
+	height: auto;
+	padding: 10px;
+	p {
+		margin: 0;
+	}
 }
 .stars-icon {
-	display: none;
+	width: 30%;
 }
 
 // Opinions Section
@@ -59,4 +62,10 @@
 }
 .opinion__card {
 	width: 100%;
+}
+
+@media screen and (width: 540px) {
+	.main-wrapper {
+		width: 370px;
+	}
 }

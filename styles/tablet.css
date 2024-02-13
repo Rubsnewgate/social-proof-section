@@ -13,6 +13,13 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 541px) {
+  body {
+    display: grid;
+    place-content: center;
+    height: auto;
+  }
+}
 .info-section {
   padding: 0 5vw;
 }

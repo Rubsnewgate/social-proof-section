@@ -13,6 +13,13 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 541px) {
+  body {
+    display: grid;
+    place-content: center;
+    height: auto;
+  }
+}
 .background-top {
   position: absolute;
   width: 45vw;
