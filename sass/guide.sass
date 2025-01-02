@@ -1,0 +1,43 @@
+// colors
+$very-dark-magenta: hsl(300, 43%, 22%)
+$soft-pink: hsl(333, 80%, 67%)
+$dark-grayish-magenta: hsl(303, 10%, 53%)
+$light-grayish-magenta: hsl(300, 24%, 96%)
+$white: hsl(0, 0%, 100%)
+
+// typography
+$primary-font: 'League Spartan', sans-serif
+
+// font-sizes
+$lg-size: 4rem
+$md-size: 1.6rem
+$sm-size: 1.4rem
+
+// font-weigths
+$light: 400
+$medium: 500
+$bold: 700
+
+// general-resets
+*
+	box-sizing: border-box
+
+html
+	font-size: 62.5%
+
+body
+	display: grid
+	place-content: center
+	position: relative
+	width: 100%
+	min-height: 100vh
+	margin: 0
+	padding: 20px 50px
+
+// mixins
+@mixin flexbox($direction:null, $content:null, $align:null, $gap:null)
+	display: flex
+	flex-direction: $direction
+	justify-content: $content
+	align-items: $align
+	gap: $gap

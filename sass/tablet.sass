@@ -1,0 +1,64 @@
+@use './guide.sass'
+
+// background
+.background-top
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: top
+
+.background-bottom
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: bottom
+
+// main wrapper
+.main-wrapper
+	height: auto
+
+// info section
+.info-section
+	padding: 0 5vw
+
+// info section (right column)
+.company-rating
+	width: 80%
+	gap: 10px
+	text-align: center
+
+.stars-icon
+	width: 25%
+
+// opinions section
+.opinions-section
+	padding: 0 5vw 6vh
+	gap: 10px
+
+// opinions section (right column)
+.company-rating
+	width: 90%
+
+.rate-one, .rate-two, .rate-three
+	align-self: start
+
+.stars-icon
+	width: 26%
+
+// opinions section (cards styles)
+.opinion__card
+	@include guide.flexbox(column)
+	width: 28vw
+	height: 35vh
+	padding: 20px
+
+// breakpoints
+@media screen and (min-height: 1024px) and (max-height: 1369px)
+	.opinion__card
+		height: 260px
+
+@media screen and (min-width: 768px) and (max-width: 821px)
+	.company-rating
+		width: 100%
+
+@media screen and (min-width: 768px) and (max-width: 769px)
+	.stars-icon
+		width: 30%
